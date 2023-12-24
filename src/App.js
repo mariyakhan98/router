@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+
+import Table from './Component/Table';
+import Next from './Component/Next';
+import { BrowserRouter,Route,Routes} from "react-router-dom"
+import Createadd from './Component/Createadd';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  
+    <>
+    <BrowserRouter>
+    <Routes>
+    
+    {/* <Route path="/" element={<Header />} /> */}
+    <Route path="/" element={<Table />} />
+    <Route path="/createadd" element={<Createadd />} />
+     <Route path="/next" element={<Next />}/> 
+     {/* <Route path="/header" element={<Header/>}/>
+     <Route path="/footer" element={<Footer/>}/>  */}
+    </Routes>
+    </BrowserRouter>
+        </>
   );
 }
 
